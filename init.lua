@@ -1,5 +1,6 @@
 vim.cmd [[colorscheme torte]]
 vim.cmd [[let g:rustfmt_autosave = 1]]
+vim.cmd [[:autocmd FileType lua setlocal tabstop=4 shiftwidth=4 expandtab]]
 vim.wo.number = true
 vim.wo.relativenumber = true
 
