@@ -9,6 +9,8 @@ return {
 	    }
 	  end
 	},
+	-- Provides latest version number and completion for
+	-- crates in Cargo.toml.
         {
             'saecki/crates.nvim',
             tag = 'stable',
@@ -30,4 +32,8 @@ return {
 		}
             end,
         },
+	-- Helper for getting quickfix while not using :make
+	-- as it logs to a separate window. Example:
+	-- :AsyncRun cargo test
+	{ 'skywind3000/asyncrun.vim' },
 }
