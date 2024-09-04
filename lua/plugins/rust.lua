@@ -7,6 +7,8 @@ return {
                     serverStatusNotification = true
                 }
             }
+
+            vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)
         end
     },
     -- Provides latest version number and completion for
