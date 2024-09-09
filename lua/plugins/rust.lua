@@ -9,6 +9,8 @@ return {
             }
 
             vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)
+            vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
+            vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
         end
     },
     -- Provides latest version number and completion for
