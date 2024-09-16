@@ -3,9 +3,19 @@ return {
         'neovim/nvim-lspconfig',
         config = function()
             require('lspconfig').rust_analyzer.setup{
+                settings = {
+                    ['rust-analyzer'] = {
+                        rust = {
+                            -- Workaround for rust-analyzer messing up the build cache
+                            -- Without it, more dependencies get recompiled at every
+                            -- change.
+                            analyzerTargetDir = true
+                        }
+                    }
+                },
                 experimental = {
                     serverStatusNotification = true
-                }
+                },
             }
 
             vim.keymap.set('n', '<leader>r', vim.lsp.buf.rename)
