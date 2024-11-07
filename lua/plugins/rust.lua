@@ -52,4 +52,5 @@ return {
     -- as it logs to a separate window. Example:
     -- :AsyncRun cargo test
     { 'skywind3000/asyncrun.vim' },
+    { 'tpope/vim-fugitive' },
 }
